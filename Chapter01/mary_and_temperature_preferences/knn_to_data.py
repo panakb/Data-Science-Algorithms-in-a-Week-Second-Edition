@@ -3,10 +3,19 @@
 # every data entry consisting of the temperature in degrees Celsius,
 # wind speed and then the classification cold/warm.
 
+# "program": "${file} --param1 mary_and_temperature_preferences.data --param2 mary_and_temperature_preferences_completed.data --param3 1 --param4 5 --param5 30 --param6 0 --param7 10",
+# mary_and_temperature_preferences.data mary_and_temperature_preferences_completed.data 1 5 30 0 10
+
+
 import sys
+import sys
+import os
 sys.path.append('..')
 sys.path.append('../../common')
+print(os.getcwd())
 import knn  # noqa
+# sys.path.append('/path/to/directory')
+
 import common  # noqa
 
 # Start of the program

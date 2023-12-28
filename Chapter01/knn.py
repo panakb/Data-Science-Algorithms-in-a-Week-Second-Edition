@@ -2,15 +2,19 @@
 import math
 import sys
 sys.path.append('../common')
-import sort  # noqa
+# import sort  # noqa
 import common  # noqa
 
 
-def euclidean_metric_2d((x1, y1), (x2, y2)):
-    return math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
+def euclidean_metric_2d(point1, point2):
+    x1, y1 = point1
+    x2, y2 = point2
+    return math.sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
 
 
-def manhattan_metric_2d((x1, y1), (x2, y2)):
+def manhattan_metric_2d(point1, point2):
+    x1, y1 = point1
+    x2, y2 = point2
     return abs(x1 - x2) + abs(y1 - y2)
 
 # Reset the counts for the neighbors and the classes(groups) of a data
@@ -116,21 +120,24 @@ class DistBuffer:
     def __append(self, x, y):
         self.dist_list.append((x, y, self.metric((0, 0), (x, y))))
 
-# Assuming that the sorting algorithm does not change the order of the
-# initial already sorted elements. This is so that next() does not skip
-# some elements and returns a different element instead.
+    # Assuming that the sorting algorithm does not change the order of the
+    # initial already sorted elements. This is so that next() does not skip
+    # some elements and returns a different element instead.
     def __sortList(self):
         self.dist_list.sort(key=proj_to_3rd)
 
     def printList(self):
-        print self.dist_list
+        print(self.dist_list)
 
 
-def proj_to_3rd((x, y, d)):
+def proj_to_3rd(coord):
+    x, y, d = coord
     return d
 
 
-def less_than_on_3rd((x1, y1, d1), (x2, y2, d2)):
+def less_than_on_3rd(coord1, coord2):
+    x1, y1, d1 = coord1
+    x2, y2, d2 = coord2
     return d1 < d2
 
 # lookup_limit specifies at how many neighbors at most the algorithm
