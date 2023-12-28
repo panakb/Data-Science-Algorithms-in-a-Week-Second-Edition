@@ -47,7 +47,7 @@ def get_x_y_colors(data):
     for i in range(0, len(data)):
         dic['x'][i] = data[i][0]
         dic['y'][i] = data[i][1]
-        dic['colors'][i] = data[i][2]
+        dic['colors'][i] = data[i][2].decode()
     return dic
 
 # Fills the unclassified 2d data with a class name group.

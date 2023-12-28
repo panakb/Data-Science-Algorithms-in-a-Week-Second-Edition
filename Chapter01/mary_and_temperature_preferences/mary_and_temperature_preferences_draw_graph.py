@@ -15,13 +15,14 @@ wind_to = 10
 
 data = np.loadtxt(open(data_file_name, 'r'),
                   dtype={'names': ('temperature', 'wind', 'perception'),
-                         'formats': ('i4', 'i4', 'S4')})
-
+                         'formats': ('i4', 'i4' , 'S4')})
+#
 # Convert the classes to the colors to be displayed in a diagram.
 for i in range(0, len(data)):
-    if data[i][2] == 'cold':
+    print(data[i][2])
+    if data[i][2].decode() == 'cold':
         data[i][2] = 'blue'
-    elif data[i][2] == 'warm':
+    elif data[i][2].decode() == 'warm':
         data[i][2] = 'red'
     else:
         data[i][2] = 'gray'

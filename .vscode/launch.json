@@ -6,7 +6,7 @@
     "configurations": [
         
         {
-            "name": "Python: Current File",
+            "name": "Python: knn_to_data.py",
             "type": "python",
             "request": "launch",
             "program": "knn_to_data.py",
@@ -22,7 +22,17 @@
                 "10"
             ],
             "cwd": "C:/GIT/Data-Science-Algorithms-in-a-Week-Second-Edition/Chapter01/mary_and_temperature_preferences"
+        },
+        {
+            "name": "Python: mary_and_temperature_preferences_draw_graph.py",
+            "type": "python",
+            "request": "launch",
+            "program": "mary_and_temperature_preferences_draw_graph.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "cwd": "C:/GIT/Data-Science-Algorithms-in-a-Week-Second-Edition/Chapter01/mary_and_temperature_preferences"
         }
+
 
     ]
 }
