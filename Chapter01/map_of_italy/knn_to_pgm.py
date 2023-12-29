@@ -23,14 +23,16 @@ output_image = sys.argv[2]
 k = int(sys.argv[3])  # the number of neighbors
 
 
-def euclidean_metric_2d((x1, y1), (x2, y2)):
+def euclidean_metric_2d(point1, point2):
+    (x1, y1) = point1
+    (x2, y2) = point2
     return math.sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2))
 
 
 (img_raw, width, height, max_color) = common.load_pgm_img(input_image)
-print width
-print height
-print max_color
+print(width)
+print(height)
+print(max_color)
 # Remove the unclassified instances from the picture.
 img = {}
 for (x, y), color in img_raw.items():

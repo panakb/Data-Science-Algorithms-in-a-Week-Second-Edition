@@ -32,4 +32,4 @@ for y in range(0, heightc):
 
 total_pixels = widthc * heightc
 error_rate = float(error_count) / total_pixels
-print 'Error rate:', error_rate
+print (f"Error rate: {error_rate}")
