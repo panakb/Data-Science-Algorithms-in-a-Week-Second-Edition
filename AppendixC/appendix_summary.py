@@ -9,12 +9,13 @@ import sys
 
 
 def print_full_name(first_name, last_name):
-    print "The name of the person is:", first_name, last_name
+    print("The name of the person is:", first_name, last_name)
 
 
 print_full_name("Satoshi", "Nakamoto")
 
 for i in range(0, 5):
-    print i
+    print(i)
 
-print "This is a program summarizing the appendix."
+print("This is a program summarizing the appendix.")
+

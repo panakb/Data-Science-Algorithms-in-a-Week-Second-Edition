@@ -29,7 +29,7 @@
             "program": "mary_and_temperature_preferences_draw_graph.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "cwd": "C:/GIT/Data-Science-Algorithms-in-a-Week-Second-Edition/Chapter01/mary_and_temperature_preferences"
+            "cwd": "${workspaceFolder}/Chapter01/mary_and_temperature_preferences",
         },
         {
             "name": "Python: knn_to_pgm.py",
@@ -52,7 +52,7 @@
             "program": "italy_draw_graph.py",
             "console": "integratedTerminal",
             "justMyCode": true,
-            "cwd": "C:/GIT/Data-Science-Algorithms-in-a-Week-Second-Edition/Chapter01/map_of_italy",
+            "cwd": "${workspaceFolder}/Chapter01/map_of_italy",
             "args": [
                 "italy_100completed_3_a.pgm",
                 "italy.pgm"

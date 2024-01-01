@@ -6,4 +6,4 @@ file.close()
 
 # read the file
 file = open("test.txt", "r")
-print file.read()
+print(file.read())
